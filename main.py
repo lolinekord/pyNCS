@@ -38,7 +38,7 @@ def get_tid(html: str) -> list[str]:
     Get the tid from a locally archived HTML file.
     """
     # music list
-    music_list = html.split("<h5>RecentReleases<divclass=\"grid-list\">")[1].split("</article>")[0]
+    music_list = html.split("<h5>RecentReleases</h5><divclass=\"row\">")[1].split("</article>")[0]
     
     # get tid
     tid = re.findall(r"data-tid=\"([\da-z-]+)\"data-versions=", music_list)
