@@ -64,13 +64,11 @@ def download_ncs(tid: str) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="A Python script to download all music files from the NCS official site.")
-    parser.add_argument("fetch", type=bool, required=False, help="Save all song list pages.")
-    parser.add_argument("parse", type=bool, required=False, help="Extract the song UUID (tid) from the saved HTML file.")
-    parser.add_argument("download", type=bool, required=False, help="Download the file based on the saved tid.")
+    parser.add_argument("--mode", type=str)
     
     args = parser.parse_args()
 
-    if args.scrape:
+    if args.mode == "fetch":
         print("[+] Fetch the HTML file")
         input("[!] Pless Enter to start")
 
@@ -78,7 +76,7 @@ if __name__ == "__main__":
 
         input("[!] done")
 
-    elif args.parse:
+    elif args.mode == "parse":
         print("[+] Extract tid")
         input("[!] Pless Enter to start")
 
@@ -94,7 +92,7 @@ if __name__ == "__main__":
         
         input("[!] done")
 
-    elif args.download:
+    elif args.mode == "download":
         print("[+] Download NCS")
         input("[!] Press Enter to start. This will take time and traffic to download all the songs.")
 

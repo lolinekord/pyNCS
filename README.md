@@ -10,15 +10,15 @@ It is written very succinctly and can be easily manipulated using command line a
 
 ### Archive the latest information from the [official website](https://ncs.io/):
 
-    python3 main.py scrape
+    python3 main.py --mode fetch
 
 ### Extracting song listings from archived HTML files:
 
-    python3 main.py parse
+    python3 main.py --mode parse
 
 ### Download all data based on the extracted song list (tid):
 
-    python3 main.py download
+    python3 main.py --mode download
 
 
 That's it! All your songs should now be downloaded.

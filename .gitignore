@@ -1,5 +1,5 @@
 # Custom
-/ncs_html/*
+/ncs_html/*.html
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
